@@ -1,0 +1,21 @@
+.pagination {
+    width: 100%;
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+}
+
+.pagination__link {
+  @extend %sans-serif;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.pagination__link--prev {
+    float: left;
+}
+.pagination__link--next {
+    float: right;
+}
