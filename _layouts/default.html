@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="l-container-content">
+      {% include header-subpage.html %}
+      <main class="l-width-content l--has-pt l--has-pb main-content">
+          <aside class="l-container-aside">
+            {% include navigation.html %}
+          </aside>
+          <section class="l-container-inner-content">
+              {{ content }}
+          </section>
+      </main>
+      <nav class="l-width-content l--has-pb pagination">
+          {% include pagination.html %}
+      </nav>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

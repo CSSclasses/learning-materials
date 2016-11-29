@@ -1,0 +1,32 @@
+.navigation {}
+
+.navigation__list {
+  margin-bottom: 0;
+
+  .navigation__list-item {
+    color: $color-dove-gray;
+    margin-bottom: 0;
+    &::before {
+      content: none;
+    }
+    &.current {
+      border-left: 2px solid $color-persian-red;
+    }
+
+  }
+}
+
+.navigation__link {
+  @extend %sans-serif;
+  @extend %small;
+  border-bottom: none;
+  color: $color-dove-gray;
+  display: block;
+  padding: $base-unit/4 $base-unit/2;
+
+  &:visited { color: $color-dove-gray; }
+
+  .current & {
+      color: $color-persian-red;
+  }
+}

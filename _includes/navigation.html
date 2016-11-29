@@ -1,0 +1,13 @@
+<nav class="navigation">
+  <ul class="navigation__list">
+      {% for post in site.posts reversed %}
+        {% assign current = nil %}
+        {% if page.url == post.url %}
+          {% assign current = 'current' %}
+        {% endif %}
+        <li class="navigation__list-item {{ current }}">
+          <a class="navigation__link" href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
